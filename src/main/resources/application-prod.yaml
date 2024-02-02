@@ -1,0 +1,28 @@
+server:
+  port: 19998
+  ip: 49.234.53.55
+
+
+text: prod
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://49.234.53.55:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2b8
+    username: blog
+    password: b2kfjeYPThJTxFeX
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/blog/**Mapper.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-enums-package: com.project.blog.enums
+
+
+files:
+  uploads:
+    path: /www/wwwroot/49.234.53.55/uploads/
